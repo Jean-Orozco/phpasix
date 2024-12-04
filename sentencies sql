@@ -1,0 +1,40 @@
+CREATE TABLE llibres (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titol VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    any_publicacio YEAR,
+    disponible BOOLEAN DEFAULT TRUE
+);
+
+INSERT INTO books (name, author, releaseYear) VALUES
+('1984', 'George Orwell', 1949),
+('Don Quijote de la Mancha', 'Miguel de Cervantes', 1605),
+('El señor de los anillos', 'J.R.R. Tolkien', 1954),
+('La sombra del viento', 'Carlos Ruiz Zafón', 2001),
+('El código Da Vinci', 'Dan Brown', 2003),
+('Orgullo y prejuicio', 'Jane Austen', 1813),
+('El Principito', 'Antoine de Saint-Exupéry', 1943),
+('Los pilares de la tierra', 'Ken Follett', 1989),
+
+
+CREATE TABLE videojoc (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titol VARCHAR(255) NOT NULL,
+    plataforma VARCHAR(100),
+    any_lançament YEAR,
+    preu DECIMAL(10, 2),
+    valoracio FLOAT
+);
+
+INSERT INTO videojoc (titol, plataforma, any_lançament, preu, valoracio)
+VALUES
+('The Legend of Zelda: Breath of the Wild', 'Nintendo Switch', 2017, 59.99, 9.5),
+('God of War', 'PlayStation 4', 2018, 39.99, 9.8),
+('Minecraft', 'PC', 2011, 26.95, 9.0),
+('Halo Infinite', 'Xbox Series X', 2021, 59.99, 8.7),
+('Red Dead Redemption 2', 'PlayStation 4', 2018, 49.99, 9.6),
+('Cyberpunk 2077', 'PC', 2020, 59.99, 7.8),
+('Super Mario Odyssey', 'Nintendo Switch', 2017, 59.99, 9.7),
+('Elden Ring', 'PC', 2022, 69.99, 9.9),
+('FIFA 23', 'PlayStation 5', 2022, 69.99, 7.5),
+('The Witcher 3: Wild Hunt', 'PC', 2015, 29.99, 9.4);
